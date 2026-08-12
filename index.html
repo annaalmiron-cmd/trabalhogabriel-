@@ -3,50 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro projeto Front-End</title>
+    <title>Horizonte Soluções Digitais</title>
     <link rel="stylesheet" href="estilo.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+
     <header class="cabecalho">
-        <p class="etiqueta">Programação Front-End - 2 DS Subsequente</p>
-        <h1>Meu primeiro projeto Front-End</h1>
-        <p>Uma página organizada para conferir se HTML, CSS e Javascript estão conectados corretamente.</p>
+        <p class="etiqueta">Tecnologia para pequenos negócios</p>
+        <h1>Horizonte Soluções Digitais</h1>
+        <p>Organizamos presença digital, atendimento e processos para empresas que desejam crescer com clareza.</p>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#processo">Como trabalhamos</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-           
-     <main>
-         <section class= "painel" arial-labelledby="titulo-arquivo">   
-              <h2 id= "titulo-arquivos">Arquivos do projeto</h2>
-              <div class="grade-arquivos">
-                  <article>   
-                        <strong> index.html</strong>
-                        <span> Organiza o conteúdo e conecta os demais arquivos.</span>
-            </article>
+
+    <main id="conteudo">
+        <section id="servicos" aria-labelledby="titulo-servicos">
+            <h2 id="titulo-servicos">Serviços para a rotina da empresa</h2>
+            <p>Cada serviço resolve uma necessidade comum de organização, divulgação ou relacionamento com clientes.</p>
+
             <article>
-            <strong>estilo.css</strong>
-            <span>Controla cores, espaçamentos e responsividade.</span>
-               </article>
-                <article>
-                <strong>script.js</strong>
-                <span>Adiciona comportamento e responde ás ações do usuários.</span>
+                <h3>Site institucional</h3>
+                <p>Página profissional para apresentar a empresa, seus serviços e os canais de contato.</p>
             </article>
-             <article>
-                <strong>README.md</strong>
-                <span>Documenta o projetoo, o estudante e a forma de execução.</span>
+
+            <article>
+                <h3>Catálogo digital</h3>
+                <p>Organização de produtos ou serviços em uma experiência simples para computador e celular.</p>
             </article>
-         </div>
-       </section>
 
-        <section class="painel" arial-labelledby="titulo-teste">
-            <h2 id="titulo-teste">Teste do ambiente</h2>
-            <p>Abra a página no navegador e use o botão para verificar a ligação entre os arquivos.</p>
-                <button id= "testarprojeto" type="button">Verificar projeto</button>
-                <p id="statusProjeto" class="status" arial-live="polite">Arguandando
-              </section>
-         </main>
+            <article>
+                <h3>Automação de atendimento</h3>
+                <p>Formulários e fluxos básicos para reduzir tarefas repetitivas e registrar solicitações.</p>
+            </article>
+        </section>
 
-  <footer>
-     <p>Exercícios FE01 - Anna clara</p>
+        <section id="processo" aria-labelledby="titulo-processo">
+            <h2 id="titulo-processo">Como trabalhamos</h2>
+            <ol>
+                <li>Entendemos o problema e as pessoas envolvidas.</li>
+                <li>Organizamos o conteúdo e desenhamos a solução.</li>
+                <li>Construímos, testamos e registramos as melhorias.</li>
+            </ol>
+        </section>
+
+        <section id="equipe" aria-labelledby="titulo-equipe">
+            <h2 id="titulo-equipe">Equipe responsável</h2>
+            <p>Profissionais de atendimento, design e desenvolvimento trabalham juntos para transformar necessidades em soluções úteis.</p>
+        </section>
+
+        <aside id="atendimento" aria-labelledby="titulo-atendimento">
+            <h2 id="titulo-atendimento">Atendimento</h2>
+            <p>Precisa conversar antes de solicitar um projeto?</p>
+            <button id="mostrarAtendimento" type="button" aria-expanded="false" aria-controls="detalhesAtendimento">
+                Mostrar horários
+            </button>
+            <div id="detalhesAtendimento" hidden>
+                <p>Segunda a sexta, das 8h às 18h.</p>
+                <p>Retorno inicial em até um dia útil.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer id="contato">
+        <h2>Contato profissional</h2>
+        <address>
+            Avenida Central, 250 — Curitiba/PR<br>
+            <a href="mailto:contato@horizontedigital.example">contato@horizontedigital.example</a>
+        </address>
+        <p>Exercício FE02 • Programação Front-End</p>
     </footer>
 </body>
 </html>
