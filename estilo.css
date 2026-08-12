@@ -1,0 +1,209 @@
+:root {
+    --fundo: #07111f;
+    --painel: #10243a;
+    --campo: #0a192a;
+    --texto: #f4f8ff;
+    --texto-suave: #c4d0df;
+    --destaque: #67e8f9;
+    --sucesso: #86efac;
+    --borda: #385875;
+    --foco: #facc15;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+.pular-conteudo {
+    position: absolute;
+    top: -80px;
+    left: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--foco);
+    color: #111827;
+    font-weight: 800;
+}
+
+.pular-conteudo:focus {
+    top: 16px;
+}
+
+main {
+    width: min(760px, 92%);
+    margin-inline: auto;
+    padding: 48px 0;
+}
+
+.cabecalho,
+form {
+    padding: 26px;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: var(--painel);
+}
+
+.cabecalho {
+    margin-bottom: 22px;
+}
+
+.etiqueta {
+    color: var(--destaque);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+h1,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+p,
+small {
+    color: var(--texto-suave);
+    line-height: 1.55;
+}
+
+fieldset {
+    margin: 0 0 24px;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+}
+
+legend {
+    padding: 0 8px;
+    color: var(--destaque);
+    font-weight: 800;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin-top: 7px;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    background: var(--campo);
+    color: var(--texto);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--foco);
+    outline-offset: 3px;
+}
+
+.grupo-opcoes {
+    margin-bottom: 18px;
+}
+
+.opcao {
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.opcao input {
+    width: auto;
+    margin: 0 8px 0 0;
+}
+
+.termos {
+    line-height: 1.5;
+}
+
+.acoes {
+    margin-top: 8px;
+}
+
+button {
+    min-height: 48px;
+    margin: 0 10px 10px 0;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--destaque);
+    color: #04131f;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+button.secundario {
+    border: 1px solid var(--borda);
+    background: transparent;
+    color: var(--texto);
+}
+
+.status {
+    margin-top: 14px;
+    padding: 16px;
+    border-left: 5px solid var(--sucesso);
+    border-radius: 8px;
+    background: #0a1c21;
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+    main {
+        padding: 24px 0;
+    }
+
+    .cabecalho,
+    form,
+    fieldset {
+        padding: 18px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+}

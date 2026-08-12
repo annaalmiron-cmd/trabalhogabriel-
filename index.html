@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de cliente | Horizonte Digital</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o formulário</a>
+
+    <main id="conteudo">
+        <header class="cabecalho">
+            <p class="etiqueta">Atendimento comercial</p>
+            <h1>Cadastro de cliente</h1>
+            <p>Preencha os campos para solicitar o primeiro contato da equipe.</p>
+            <p><span aria-hidden="true">*</span> Campos obrigatórios.</p>
+        </header>
+
+        <form id="cadastroCliente">
+            <fieldset>
+                <legend>Dados da pessoa responsável</legend>
+
+                <div class="campo">
+                    <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                    <input id="nome" name="nome" type="text" autocomplete="name" minlength="3" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail profissional <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" aria-describedby="ajudaEmail" required>
+                    <small id="ajudaEmail">Exemplo: nome@empresa.com.br</small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+                    <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(41) 99999-9999" required>
+                </div>
+
+                <div class="campo">
+                    <label for="empresa">Empresa</label>
+                    <input id="empresa" name="empresa" type="text" autocomplete="organization">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Necessidade de atendimento</legend>
+
+                <div class="campo">
+                    <label for="servico">Serviço de interesse <span aria-hidden="true">*</span></label>
+                    <select id="servico" name="servico" required>
+                        <option value="" selected disabled>Selecione uma opção</option>
+                        <option value="site">Site institucional</option>
+                        <option value="sistema">Sistema interno</option>
+                        <option value="manutencao">Manutenção de projeto</option>
+                    </select>
+                </div>
+
+                <fieldset class="grupo-opcoes">
+                    <legend>Como prefere receber o retorno? <span aria-hidden="true">*</span></legend>
+
+                    <label class="opcao" for="retornoEmail">
+                        <input id="retornoEmail" name="retorno" type="radio" value="E-mail" required>
+                        E-mail
+                    </label>
+
+                    <label class="opcao" for="retornoTelefone">
+                        <input id="retornoTelefone" name="retorno" type="radio" value="Telefone">
+                        Telefone
+                    </label>
+                </fieldset>
+
+                <div class="campo">
+                    <label for="mensagem">Explique brevemente a necessidade</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" maxlength="300" aria-describedby="ajudaMensagem"></textarea>
+                    <small id="ajudaMensagem">Não informe senhas, documentos ou outros dados sensíveis.</small>
+                </div>
+
+                <label class="opcao termos" for="termos">
+                    <input id="termos" name="termos" type="checkbox" required>
+                    Confirmo que os dados podem ser usados para responder a esta solicitação. <span aria-hidden="true">*</span>
+                </label>
+            </fieldset>
+
+            <div class="acoes">
+                <button type="submit">Enviar cadastro</button>
+                <button class="secundario" type="reset">Limpar formulário</button>
+            </div>
+
+            <div id="statusCadastro" class="status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+        </form>
+    </main>
+</body>
+</html>
