@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de serviços - Flexbox</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="topo-conteudo">
+            <div>
+                <p class="etiqueta">FE05 - Layout profissional com Flexbox</p>
+                <h1>Central de serviços digitais</h1>
+                <p class="introducao">Acompanhe serviços, prazos e responsáveis em uma interface organizada para diferentes tamanhos de tela.</p>
+            </div>
+
+            <button id="alternarDirecao" type="button" aria-pressed="false" aria-controls="listaServicos">
+                Exibir cartões em coluna
+            </button>
+        </div>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#indicadores">Indicadores</a></li>
+                <li><a href="#orientacoes">Orientações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="layout-principal">
+        <section id="servicos" class="conteudo" aria-labelledby="titulo-servicos">
+            <div class="secao-cabecalho">
+                <div>
+                    <p class="sobrelinha">Fila da equipe</p>
+                    <h2 id="titulo-servicos">Serviços em acompanhamento</h2>
+                </div>
+                <p id="statusLayout" class="status" role="status" aria-live="polite">Cartões distribuídos em linhas flexíveis.</p>
+            </div>
+
+            <div id="listaServicos" class="lista-servicos">
+                <article class="cartao-servico">
+                    <div class="cartao-topo">
+                        <span class="situacao em-andamento">Em andamento</span>
+                        <span class="prazo">2 dias</span>
+                    </div>
+                    <h3>Site institucional</h3>
+                    <p>Revisão da página inicial e organização dos canais de contato.</p>
+                    <footer class="cartao-rodape">
+                        <span>Responsável: Ana</span>
+                        <a href="#orientacoes">Ver detalhes</a>
+                    </footer>
+                </article>
+
+                <article class="cartao-servico">
+                    <div class="cartao-topo">
+                        <span class="situacao aguardando">Aguardando</span>
+                        <span class="prazo">4 dias</span>
+                    </div>
+                    <h3>Catálogo digital</h3>
+                    <p>Cadastro inicial de produtos e preparação das categorias.</p>
+                    <footer class="cartao-rodape">
+                        <span>Responsável: Bruno</span>
+                        <a href="#orientacoes">Ver detalhes</a>
+                    </footer>
+                </article>
+
+                <article class="cartao-servico destaque">
+                    <div class="cartao-topo">
+                        <span class="situacao urgente">Prioridade</span>
+                        <span class="prazo">Hoje</span>
+                    </div>
+                    <h3>Formulário de orçamento</h3>
+                    <p>Ajuste dos campos obrigatórios e das mensagens de retorno.</p>
+                    <footer class="cartao-rodape">
+                        <span>Responsável: Carla</span>
+                        <a href="#orientacoes">Ver detalhes</a>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <aside id="indicadores" class="painel-lateral" aria-labelledby="titulo-indicadores">
+            <h2 id="titulo-indicadores">Indicadores do dia</h2>
+            <div class="indicadores">
+                <article>
+                    <strong>3</strong>
+                    <span>serviços ativos</span>
+                </article>
+                <article>
+                    <strong>1</strong>
+                    <span>prioridade alta</span>
+                </article>
+                <article>
+                    <strong>2 dias</strong>
+                    <span>prazo médio</span>
+                </article>
+            </div>
+        </aside>
+    </main>
+
+    <section id="orientacoes" class="orientacoes" aria-labelledby="titulo-orientacoes">
+        <h2 id="titulo-orientacoes">Como o Flexbox organiza a interface?</h2>
+        <p>O contêiner controla direção, alinhamento, distribuição, quebra de linha e espaçamento. Os itens podem crescer ou reduzir conforme o espaço disponível.</p>
+        <ul>
+            <li><code>display: flex</code> ativa o modelo flexível.</li>
+            <li><code>flex-wrap</code> permite distribuir cartões em novas linhas.</li>
+            <li><code>justify-content</code> atua no eixo principal.</li>
+            <li><code>align-items</code> atua no eixo transversal.</li>
+            <li><code>flex</code> controla crescimento, redução e tamanho-base.</li>
+        </ul>
+    </section>
+
+    <footer class="rodape-pagina">
+        <p>Exercício FE05 - Programação Front-End - 2 DS Subsequente</p>
+    </footer>
+</body>
+</html>

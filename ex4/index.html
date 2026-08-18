@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de planos - CSS profissional</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <p class="etiqueta">FE04 - Seletores, cascata e Box Model</p>
+        <h1>Planos para presença digital</h1>
+        <p class="introducao">Compare soluções para empresas que precisam publicar, organizar e evoluir seus canais digitais.</p>
+        <button id="alternarTema" type="button" aria-pressed="false">Ativar tema claro</button>
+        <p id="statusTema" class="status" role="status" aria-live="polite">Tema escuro ativo.</p>
+    </header>
+
+    <main id="conteudo">
+        <section class="painel" aria-labelledby="titulo-planos">
+            <h2 id="titulo-planos">Planos disponíveis</h2>
+
+            <article class="cartao" data-status="essencial">
+                <p class="selo">Essencial</p>
+                <h3>Presença</h3>
+                <p>Uma página institucional organizada para apresentar serviços e contatos.</p>
+                <p class="preco"><span>R$</span> 490</p>
+            </article>
+
+            <article id="planoDestaque" class="cartao destaque" data-status="recomendado">
+                <p class="selo">Recomendado</p>
+                <h3>Negócio</h3>
+                <p>Site com páginas de serviços, formulário de contato e identidade visual consistente.</p>
+                <p class="preco"><span>R$</span> 890</p>
+            </article>
+
+            <article class="cartao" data-status="avancado">
+                <p class="selo">Avançado</p>
+                <h3>Operação</h3>
+                <p>Interface preparada para catálogos, integrações e evolução contínua do produto.</p>
+                <p class="preco"><span>R$</span> 1.490</p>
+            </article>
+        </section>
+
+        <aside class="painel resumo" aria-labelledby="titulo-resumo">
+            <h2 id="titulo-resumo">Como o CSS decide o resultado?</h2>
+            <p>Seletores encontram elementos. A cascata combina origem, especificidade e ordem. As variáveis reduzem repetição. O Box Model controla conteúdo, preenchimento, borda e margem.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Exercício FE04 - Programação Front-End - 2 DS Subsequente</p>
+    </footer>
+</body>
+</html>
