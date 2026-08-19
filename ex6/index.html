@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de revisão de conteúdo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <p class="etiqueta">Exercício FE06</p>
+        <h1>Painel de revisão de conteúdo</h1>
+        <p class="descricao">Crie um painel com tópicos de revisão e use JavaScript para alternar a mensagem principal.</p>
+    </header>
+
+    <main class="container">
+        <section class="painel" aria-labelledby="titulo-topicos">
+            <h2 id="titulo-topicos">Tópicos da revisão</h2>
+            <div class="lista-topicos">
+                <article class="topico ativo">
+                    <h3>HTML</h3>
+                    <p>Estrutura semântica, formulários e organização do conteúdo.</p>
+                </article>
+                <article class="topico">
+                    <h3>CSS</h3>
+                    <p>Seletores, box model, flexbox, grid e responsividade.</p>
+                </article>
+                <article class="topico">
+                    <h3>JavaScript</h3>
+                    <p>Eventos, classes, atualização do DOM e interações da página.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-status">
+            <h2 id="titulo-status">Resumo atual</h2>
+            <p id="mensagemTopico" class="mensagem">Tópico em destaque: HTML.</p>
+            <button id="avancarTopico" type="button">Avançar tópico</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Exercício FE06 - 2 DS Subsequente</p>
+    </footer>
+</body>
+</html>
